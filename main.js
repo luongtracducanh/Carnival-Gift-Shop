@@ -1,4 +1,5 @@
 const input = require('sync-input');
+
 const teddy_bear = {
     name: "Teddy Bear",
     cost: 10,
@@ -49,6 +50,7 @@ const scary_mask = {
     cost: 75,
     id: 10
 }
+
 let gifts = [teddy_bear, big_red_ball, huge_bear, candy, stuffed_tiger, stuffed_dragon, skateboard, toy_car, basketball, scary_mask];
 let visitor_ticket = 0;
 
@@ -58,29 +60,28 @@ Hello friend! Thank you for visiting the carnival!`);
 function buy_gift() {
     if (gifts.length == 0) {
         console.log("Wow! There are no gifts to buy.");
-    }
-    else {
+    } else {
         let gift_id = Number(input("Enter the number of the gift you want to get: "));
 
         if (Number.isNaN(gift_id)) {
             console.log("Please enter a valid number!");
-        }
-        else {
+        } else {
             let gift_to_buy = gifts.find(i => i.id === gift_id);
+
             if (!gifts.includes(gift_to_buy)) {
                 console.log("There is no gift with that number!");
-            }
-            else {
+            } else {
                 if (visitor_ticket < gift_to_buy.cost) {
                     console.log(`You don't have enough tickets to buy this gift.\nTotal tickets: ${visitor_ticket}`);
-                }
-                else {
+                } else {
                     visitor_ticket -= gift_to_buy.cost;
+
                     for (i = 0; i < gifts.length; i++) {
                         if (gifts[i] == gift_to_buy) {
                             gifts.splice(i, 1);
                         }
                     }
+
                     console.log(`Here you go, one ${gift_to_buy.name}!\nTotal tickets: ${visitor_ticket}`);
                 }
             }
@@ -90,10 +91,10 @@ function buy_gift() {
 
 function add_ticket() {
     let add_amount = Number(input("Enter the ticket amount: "));
+
     if (Number.isNaN(add_amount) || add_amount > 1000 || add_amount < 0) {
         console.log("Please enter a valid number between 0 and 1000.");
-    }
-    else {
+    } else {
         visitor_ticket += add_amount;
         console.log(`Total tickets: ${visitor_ticket}`);
     }
@@ -105,10 +106,10 @@ function check_ticket() {
 
 function show_gifts() {
     console.log("Here's the list of gifts:\n");
+
     if (gifts.length == 0) {
         console.log("\nWow! There are no gifts to buy.");
-    }
-    else {
+    } else {
         for (let i in gifts) {
             console.log(`${gifts[i].id}- ${gifts[i].name}, Cost: ${gifts[i].cost} tickets`)
         }
@@ -137,7 +138,6 @@ while (true) {
         case 5:
             console.log("Have a nice day!");
             return;
-        // break;
         default:
             console.log("Please enter a valid number!");
             break;
