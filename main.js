@@ -1,54 +1,34 @@
 const input = require('sync-input');
 
 const teddy_bear = {
-    name: "Teddy Bear",
-    cost: 10,
-    id: 1
+    name: "Teddy Bear", cost: 10, id: 1
 };
 const big_red_ball = {
-    name: "Big Red Ball",
-    cost: 5,
-    id: 2
+    name: "Big Red Ball", cost: 5, id: 2
 }
 const huge_bear = {
-    name: "Huge Bear",
-    cost: 50,
-    id: 3
+    name: "Huge Bear", cost: 50, id: 3
 }
 const candy = {
-    name: "Candy",
-    cost: 8,
-    id: 4
+    name: "Candy", cost: 8, id: 4
 }
 const stuffed_tiger = {
-    name: "Stuffed Tiger",
-    cost: 15,
-    id: 5
+    name: "Stuffed Tiger", cost: 15, id: 5
 }
 const stuffed_dragon = {
-    name: "Stuffed Dragon",
-    cost: 30,
-    id: 6
+    name: "Stuffed Dragon", cost: 30, id: 6
 }
 const skateboard = {
-    name: "Skateboard",
-    cost: 100,
-    id: 7
+    name: "Skateboard", cost: 100, id: 7
 }
 const toy_car = {
-    name: "Toy Car",
-    cost: 25,
-    id: 8
+    name: "Toy Car", cost: 25, id: 8
 }
 const basketball = {
-    name: "Basketball",
-    cost: 20,
-    id: 9
+    name: "Basketball", cost: 20, id: 9
 }
 const scary_mask = {
-    name: "Scary Mask",
-    cost: 75,
-    id: 10
+    name: "Scary Mask", cost: 75, id: 10
 }
 
 let gifts = [teddy_bear, big_red_ball, huge_bear, candy, stuffed_tiger, stuffed_dragon, skateboard, toy_car, basketball, scary_mask];
